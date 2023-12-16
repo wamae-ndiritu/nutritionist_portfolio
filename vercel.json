@@ -1,14 +1,31 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "portfolio/wsgi.py",
+      "src": "portfolio/**/*.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "static/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "media/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/media/(.*)",
+      "dest": "/media/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "portfolio/wsgi.py"
+      "dest": "/portfolio/settings/wsgi.py"
     }
   ]
 }
