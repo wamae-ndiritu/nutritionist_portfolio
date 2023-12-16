@@ -1,0 +1,262 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+<!-- Navbar & Hero Start -->
+<div class="container-xxl position-relative p-0">
+  <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 bg-green-500">
+    <a href="{% url 'home' %}" class="navbar-brand p-0">
+      <h1 class="m-0">Vane Kerubo</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto py-0">
+        <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
+        <a href="#about" class="nav-item nav-link">About</a>
+        <a href="#services" class="nav-item nav-link">Services</a>
+        <a href="{% url 'contacts' %}" class="nav-item nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container-xxl py-5 bg-primary hero-header mb-5">
+    <div class="container my-5 py-5 px-lg-5">
+      <div class="row g-5">
+        <div class="col-lg-5 text-center text-lg-start">
+          <div class="video-container wow zoomIn">
+            <div class="overlay"></div>
+            <img src="{% static 'img/nutrionist/img-6.jpeg' %}" alt="Nutritionist"
+              style="width: 100%; height: auto; border-radius: inherit" />
+            <div class="play-button color-propagation">
+              <i class="play-icon fas fa-play"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 pt-5 text-center text-lg-start">
+          <h1 class="text-white animated slideInRight">
+            I'm <span class="display-5">Vane Kerubo</span>
+          </h1>
+          <h1 class="display-4 text-white mb-4 animated slideInRight">
+            Personalized Health Nutritionist
+          </h1>
+          <p class="text-white animated slideInRight">
+            Achieve a healthier lifestyle through personalized nutrition
+            guidance and meal planning.
+          </p>
+          <a href="{% url 'contacts' %}" class="btn btn-secondary py-sm-3 px-sm-5 me-3 animated slideInLeft">Conctact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar & Hero End -->
+<!-- About Start -->
+<div class="container-xxl py-5">
+  <div class="container px-lg-5">
+    <div class="row g-5 align-items-center" id="about">
+      <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="section-title position-relative mb-4 pb-4">
+          <h1 class="mb-2">About Me</h1>
+        </div>
+        <p class="mb-4">
+          I am a dedicated nutritionist with a committment to guiding
+          individuals on their journey to better health. With years of
+          experience and a passion for promoting well-being, I am equipped
+          to provide personalized advice tailored to your unique dietary
+          needs. Whether you're looking to improve your eating habits,
+          manage specific health conditions, or achieve overall wellness,
+          I'm here to support you.
+        </p>
+        <div class="row g-3">
+          <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
+            <div class="bg-light rounded text-center p-4">
+              <i class="fa fa-users fa-2x text-primary mb-2"></i>
+              <h2 class="mb-1">
+                <span data-toggle="counter-up">500</span>+
+              </h2>
+              <p class="mb-0">Satisfied Clients</p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
+            <div class="bg-light rounded text-center p-4">
+              <i class="fas fa-medal fa-2x text-primary mb-2"></i>
+              <h2 class="mb-1">
+                <span data-toggle="counter-up">3</span>+ yrs
+              </h2>
+              <p class="mb-0">Experience</p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
+            <div class="bg-light rounded text-center p-4">
+              <i class="fas fa-utensils fa-2x text-primary mb-2"></i>
+              <h2 class="mb-1" data-toggle="counter-up">200</h2>
+              <p class="mb-0">Meal Plans</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <img class="img-fluid wow zoomIn rounded" data-wow-delay="0.5s"
+          src="{% static 'img/nutrionist/img-4.jpeg' %}" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About End -->
+
+<!-- Comparison Start -->
+<div class="container-xxl py-5">
+  <div class="container px-lg-5" id="services">
+    <div class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp" data-wow-delay="0.1s"
+      style="max-width: 600px">
+      <h1 class="mb-3">What I Offer</h1>
+      <p class="mb-1">
+        I offer a range of personalized nutrition services tailored to
+        support your health and well-being journey. From expert guidance
+        on nutrition issues to crafting customized meal plans, my goal is
+        to empower you to lead a healthier life.
+      </p>
+    </div>
+    <div class="row gy-3 gx-5">
+      <!-- Service 1: Promote health and manage diseases -->
+      <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+        <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+        <h5 class="fw-bold">Health Promotion</h5>
+        <p>
+          Dedicated to promoting health and managing diseases through
+          personalized nutrition guidance and habits.
+        </p>
+      </div>
+
+      <!-- Service 2: Counsel clients on nutrition issues -->
+      <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+        <i class="fas fa-comments fa-3x text-primary mb-3"></i>
+        <h5 class="fw-bold">Nutrition Counseling</h5>
+        <p>
+          Offering expert counseling on nutrition issues and fostering
+          healthy eating habits for clients.
+        </p>
+      </div>
+
+      <!-- Service 3: Plan & conduct food nutritional programs -->
+      <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+        <i class="fas fa-utensils fa-3x text-primary mb-3"></i>
+        <h5 class="fw-bold">Nutritional Programs</h5>
+        <p>
+          Planning and conducting food nutritional programs to help
+          individuals lead healthy and fulfilling lives.
+        </p>
+      </div>
+
+      <!-- Service 4: Write diet and meal plans based on dietary needs -->
+      <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+        <i class="fas fa-pencil-alt fa-3x text-primary mb-3"></i>
+        <h5 class="fw-bold">Personalized Meal Plans</h5>
+        <p>
+          Crafting tailored diet and meal plans based on individual
+          dietary needs and preferences.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Comparison Start -->
+
+<!-- Testimonial Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+  <div class="container px-lg-5">
+    <h1 class="mb-3 text-center">Reviews</h1>
+    <div class="owl-carousel testimonial-carousel">
+      <div class="testimonial-item position-relative bg-light border-top border-5 border-primary rounded p-4 my-4">
+        <div
+          class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 ms-5 translate-middle bg-primary rounded-circle"
+          style="width: 45px; height: 45px; margin-top: -3px">
+          <i class="fa fa-quote-left text-white"></i>
+        </div>
+        <p class="mt-3">
+          I'm grateful to have found a nutritionist who goes beyond just prescribing meal plans. Their in-depth
+          understanding of
+          nutrition issues and genuine care for clients make the entire process enjoyable. With their support, I've
+          experienced
+          positive changes in my energy levels and overall well-being.
+        </p>
+        <div class="d-flex align-items-center">
+          <img class="img-fluid flex-shrink-0 rounded-circle" src="{% static 'img/reviews/wamae.png' %}"
+            style="width: 50px; height: 50px" />
+          <div class="ps-3">
+            <h6 class="fw-bold mb-1">Wamae Ndiritu</h6>
+            <small>Software Engineer</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-item position-relative bg-light border-top border-5 border-primary rounded p-4 my-4">
+        <div
+          class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 ms-5 translate-middle bg-primary rounded-circle"
+          style="width: 45px; height: 45px; margin-top: -3px">
+          <i class="fa fa-quote-left text-white"></i>
+        </div>
+        <p class="mt-3">
+          The nutritional programs offered by this nutritionist are truly life-changing. The attention to detail in
+          crafting
+          tailored plans based on individual needs is remarkable. Thanks to their expertise, I now have a better
+          understanding of
+          how to nourish my body for optimal health.
+        </p>
+        <div class="d-flex align-items-center">
+          <img class="img-fluid flex-shrink-0 rounded-circle" src="{% static 'img/testimonial-4.jpg' %}"
+            style="width: 50px; height: 50px" />
+          <div class="ps-3">
+            <h6 class="fw-bold mb-1">Victor N</h6>
+            <small>Profession</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-item position-relative bg-light border-top border-5 border-primary rounded p-4 my-4">
+        <div
+          class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 ms-5 translate-middle bg-primary rounded-circle"
+          style="width: 45px; height: 45px; margin-top: -3px">
+          <i class="fa fa-quote-left text-white"></i>
+        </div>
+        <p class="mt-3">
+          I can't thank this nutritionist enough for the fantastic support in managing my dietary needs. The
+          personalized diet and
+          meal plans have not only improved my physical health but also positively impacted my mental well-being. Their
+          commitment
+          to promoting health and managing diseases is evident in every session.
+        </p>
+        <div class="d-flex align-items-center">
+          <img class="img-fluid flex-shrink-0 rounded-circle" src="{% static 'img/nutrionist/img-4.jpeg' %}"
+            style="width: 50px; height: 50px" />
+          <div class="ps-3">
+            <h6 class="fw-bold mb-1">Vane Kerubo</h6>
+            <small>Nutritionist</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-item position-relative bg-light border-top border-5 border-primary rounded p-4 mt-4">
+        <div
+          class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 ms-5 translate-middle bg-primary rounded-circle"
+          style="width: 45px; height: 45px; margin-top: -3px">
+          <i class="fa fa-quote-left text-white"></i>
+        </div>
+        <p class="mt-3">
+          Working with this nutritionist has been transformative for my health journey. Their personalized approach to
+          meal
+          planning and insightful counseling not only helped me achieve my weight goals but also cultivated sustainable,
+          healthy
+          habits. I highly recommend their expertise and guidance!
+        </p>
+        <div class="d-flex align-items-center">
+          <img class="img-fluid flex-shrink-0 rounded-circle" src="{% static 'img/testimonial-4.jpg' %}"
+            style="width: 50px; height: 50px" />
+          <div class="ps-3">
+            <h6 class="fw-bold mb-1">Kate Smith</h6>
+            <small>Doctor</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

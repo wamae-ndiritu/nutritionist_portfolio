@@ -1,0 +1,147 @@
+{% extends 'layout.html' %} {% block body %}
+<!-- Navbar & Hero Start -->
+<div class="container-xxl position-relative p-0">
+  <nav
+    class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 bg-green-500"
+  >
+    <a href="{% url 'home' %}" class="navbar-brand p-0">
+      <h1 class="m-0">Vane Kerubo</h1>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse"
+    >
+      <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto py-0">
+        <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
+        <a href="{% url 'home' %}#about" class="nav-item nav-link">About</a>
+        <a href="{% url 'home' %}#services" class="nav-item nav-link">Services</a>
+        <a href="{% url 'contacts' %}" class="nav-item nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-xxl py-5 bg-primary hero-header mb-5">
+    <div class="container my-5 py-5 px-lg-5">
+      <div class="row g-5 pt-5">
+        <div class="col-12 text-center text-lg-start">
+          <h1 class="display-4 text-white animated slideInLeft">Contact Me</h1>
+          <nav aria-label="breadcrumb">
+            <ol
+              class="breadcrumb justify-content-center justify-content-lg-start animated slideInLeft"
+            >
+              <li class="breadcrumb-item">
+                <a class="text-white" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a class="text-white" href="#">Pages</a>
+              </li>
+              <li class="breadcrumb-item text-white active" aria-current="page">
+                Contact
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Navbar & Hero End -->
+
+<!-- Contact Start -->
+<div class="container-xxl py-5">
+  <div class="container px-lg-5">
+    <div
+      class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp"
+      data-wow-delay="0.1s"
+      style="max-width: 600px"
+    >
+      <h1 class="mb-3">Contact For Any Query</h1>
+      <p class="mb-1">
+        Have questions about your nutrition journey or need personalized guidance? Feel free to reach out! Our dedicated team is
+        here to provide expert advice and support tailored to your unique needs. Your well-being is our priority.
+        </p>
+      </p>
+    </div>
+    <div class="row g-5">
+      <div class="col-lg-7 col-md-6">
+        <div class="wow fadeInUp" data-wow-delay="0.2s">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                  />
+                  <label for="name">Your Name</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Your Email"
+                  />
+                  <label for="email">Your Email</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    placeholder="Subject"
+                  />
+                  <label for="subject">Subject</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a message here"
+                    id="message"
+                    style="height: 150px"
+                  ></textarea>
+                  <label for="message">Message</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary w-100 py-3" type="submit">
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="section-title position-relative mx-auto mb-4 pb-4">
+          <h3 class="fw-bold mb-0">Get In Touch</h3>
+        </div>
+        <p class="mb-2">
+          <i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New
+          Kenya Science, Ngon'g Road
+        </p>
+        <p class="mb-2">
+          <i class="fa fa-phone-alt text-primary me-3"></i>+254740924507
+        </p>
+        <p class="mb-2">
+          <i class="fa fa-envelope text-primary me-3"></i>wamaejoseph392@gmail.com
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact End -->
+{% endblock %}
