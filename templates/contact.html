@@ -60,6 +60,13 @@
       data-wow-delay="0.1s"
       style="max-width: 600px"
     >
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success" role="alert">
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
       <h1 class="mb-3">Contact For Any Query</h1>
       <p class="mb-1">
         Have questions about your nutrition journey or need personalized guidance? Feel free to reach out! Our dedicated team is
@@ -70,7 +77,8 @@
     <div class="row g-5">
       <div class="col-lg-7 col-md-6">
         <div class="wow fadeInUp" data-wow-delay="0.2s">
-          <form>
+          <form  action="{% url 'contacts' %}" method="post">
+            {% csrf_token %}
             <div class="row g-3">
               <div class="col-md-6">
                 <div class="form-floating">
@@ -78,6 +86,7 @@
                     type="text"
                     class="form-control"
                     id="name"
+                    name="name"
                     placeholder="Your Name"
                   />
                   <label for="name">Your Name</label>
@@ -89,6 +98,7 @@
                     type="email"
                     class="form-control"
                     id="email"
+                    name="email"
                     placeholder="Your Email"
                   />
                   <label for="email">Your Email</label>
@@ -100,6 +110,7 @@
                     type="text"
                     class="form-control"
                     id="subject"
+                    name="subject"
                     placeholder="Subject"
                   />
                   <label for="subject">Subject</label>
@@ -111,6 +122,7 @@
                     class="form-control"
                     placeholder="Leave a message here"
                     id="message"
+                    name="message"
                     style="height: 150px"
                   ></textarea>
                   <label for="message">Message</label>
